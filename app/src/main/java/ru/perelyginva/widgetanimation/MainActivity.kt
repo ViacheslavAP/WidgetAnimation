@@ -1,7 +1,9 @@
 package ru.perelyginva.widgetanimation
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import com.daimajia.androidanimations.library.Techniques
 import com.daimajia.androidanimations.library.YoYo
 import ru.perelyginva.widgetanimation.databinding.ActivityMainBinding
@@ -37,5 +39,12 @@ class MainActivity : AppCompatActivity() {
             .duration(700)
             .repeat(5)
             .playOn(findViewById(R.id.five))
+
+        binding?.twoActivity?.setOnClickListener(View.OnClickListener {
+            val twoActivity = Intent(this, TwoActivity::class.java)
+            startActivity(twoActivity)
+            overridePendingTransition(R.anim.slide_in, R.anim.slide_up_out)
+        })
+
     }
 }

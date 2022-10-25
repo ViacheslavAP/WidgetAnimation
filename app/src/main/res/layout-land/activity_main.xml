@@ -1,59 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/one"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="One!"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="60dp"/>
+        android:layout_marginTop="60dp"
+        android:layout_marginStart="40dp"/>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/two"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Two!"
-        android:layout_marginTop="60dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/one" />
+        app:layout_constraintEnd_toEndOf="@id/one"
+        app:layout_constraintStart_toStartOf="@id/one"
+        app:layout_constraintTop_toBottomOf="@id/one"
+        android:layout_marginTop="40dp"
+        />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/three"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Three!"
-        android:layout_marginTop="60dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toEndOf="@id/two"
+        app:layout_constraintStart_toStartOf="@id/two"
         app:layout_constraintTop_toBottomOf="@id/two" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/four"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Four!"
+        android:layout_marginStart="100dp"
         android:layout_marginTop="60dp"
+        android:text="Four!"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/three" />
+        app:layout_constraintStart_toEndOf="@+id/one"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/five"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
         android:text="Five!"
-        android:layout_marginTop="60dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/four"
+        app:layout_constraintStart_toStartOf="@+id/four"
         app:layout_constraintTop_toBottomOf="@id/four" />
 
     <androidx.appcompat.widget.AppCompatButton
@@ -61,9 +61,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TwoActivity"
-        android:layout_marginTop="60dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toEndOf="@id/five"
+        app:layout_constraintStart_toStartOf="@id/five"
         android:background="@android:color/holo_green_dark"
         app:layout_constraintTop_toBottomOf="@id/five" />
 
